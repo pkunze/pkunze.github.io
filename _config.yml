@@ -1,0 +1,31 @@
+# Site settings
+title: Paul Kunze
+email: pkunze@hotmail.de
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "" # the subpath of your site, e.g. /blog/
+
+url: "http://localhost:4000"
+#url: "http://pkunze.github.io" # the base hostname & protocol for your site
+
+twitter_username: iamdabei
+github_username:  pkunze
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+highlighter: true
+
+navigation:
+- title: Home
+  url: /index.html
+- title: About
+  url: /about.md
+- title: blog
+  url: /blog.md
+ #- title: Projects
+ #  url: /projects.html
+ #- title: Contact
+ #  url: /contact.html
