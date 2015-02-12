@@ -16,7 +16,7 @@ github_username:  pkunze
 # Build settings
 markdown: kramdown
 permalink: pretty
-highlighter: true
+highlighter: pygments
 
 navigation:
 - title: Home
