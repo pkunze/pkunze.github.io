@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-<html>
+---
+layout: my-site
+---
 
-    {% include head.html %}
-
-    <body>
-        {% include nav.html %}
-
-            {{ content }}
-
-        {% include footer.html %}
-        {% include js.html %}
-    </body>
-</html>
+<div class="page-content">
+    <div class="wrap">
+    {{ content }}
+    </div>
+</div>

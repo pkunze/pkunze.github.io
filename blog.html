@@ -1,32 +1,23 @@
 ---
-layout: blog
-title: Blog
-permalink: /blog/
+layout: default
 ---
 
-<div class="container mtb">
-    <div class="row">
-
-        <! -- BLOG POSTS LIST -->
-        <div class="col-lg-8">
-
-            {% for post in site.categories['blog'] %}
-                <! -- Blog Post -->
-                <a href="{{ post.url | prepend: site.baseurl }}">
-                    <img class="img-responsive" src="{{ "/assets/img/blog/" | prepend: site.baseurl }}{{ post.img }}">
-                </a>    
-                <a href="{{ post.url | prepend: site.baseurl }}"><h3 class="ctitle">{{ post.title }}</h3></a>
-                <p><csmall>{{ post.date | date: "%b %-d, %Y" }}. | By: {{ post.author }}</csmall></p>
-                {{ post.excerpt }}
-                <p><a href="{{ post.url | prepend: site.baseurl }}">[Read More]</a></p>
-                <div class="hline"></div>
-
-                <div class="spacing"></div>
-            {% endfor %}
-
-        </div><! --/col-lg-8 -->
-
-        {% include sidebar.html %}
-
-    </div><! --/row -->
-</div><! --/container -->
+<div class="posts">
+{% for post in site.posts %}
+	<div class="post-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<p><img src="{{ "/assets/img/user.png" | prepend: site.baseurl }}" width="50px" height="50px"> <ba>{{ post.author }}</ba></p>
+					<p><bd>{{ post.date | date: "%B %-d, %Y" }}</bd></p>
+					<h4><a href="{{ post.url | prepend: site.baseurl }}" style="text-decoration : none; color : #000;">{{ post.title }}</a></h4>
+                    <p>{% if post.img %}<img src="{{ post.img }}">{% endif %}</p>
+					<p>{% if post.excerpt %} {{ post.excerpt }}
+                       {% else %}  {{ post.description}}  {% endif %}</p>
+					<p><a href="{{ post.url | prepend: site.baseurl }}">Continue Reading...</a></p>
+				</div>
+			</div><!-- /row -->
+		</div> <!-- /container -->
+	</div> <!-- /post-section -->
+{% endfor %}
+</div>

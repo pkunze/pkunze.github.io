@@ -1,79 +1,44 @@
-Solid. A Bootstrap theme for Jekyll.
-============
-![Screenshot](https://st4ple.github.io/solid-jekyll/assets/img/browser.png)
+Stanley-Jekyll
+----
 
-This is a [Jekyll](http://jekyllrb.com/) port of the [Solid theme](http://www.blacktie.co/2014/05/solid-multipurpose-theme/) by [blacktie.co](http://www.blacktie.co/). Visit the [live demo](https://st4ple.github.io/solid-jekyll/) for a preview. 
+This is my try at a Jekyll port of the free bootstrap theme Stanley, that [BlackTie.co](http://www.blacktie.co/) created. 
 
-##Usage
-This theme can be customized, built and published straight from GitHub, thanks to [GitHub Pages](https://pages.github.com/). A local installation of Jekyll isn't even necessary!
+License
+----
 
-[Fork this repository](https://github.com/st4ple/solid-jekyll/fork) to get started. 
-####Customize  
-Most general settings and data like site name, colors, address, etc. can be configured and changed right in the main config file: `/_config.yml`
-The content of the Home page can be changed here: `/home.html`
-The content of the About page can be changed here: `/about.html`
-The content of the Portfolio page can be changed here:`/portfolio.html`
-The content of the Contact page can be changed here:`/contact.html`
-####Add content  
-Delete the demo content and publish your own content.
-#####Blog post
-Create a Blog post by creating a file called `yyyy-mm-dd-name-of-post-like-this.markdown` in the `/_posts/blog/` directory with the following template:
-```markdown
----
-layout: post          #important: don't change this
-title: "Name of post like this"
-date: yyyy-mm-dd hh:mm:ss
-author: Name
-categories:
-- blog                #important: leave this here
-- category1
-- category2
-- ...
-img: post01.jpg       #place image (850x450) with this name in /assets/img/blog/
-thumb: thumb01.jpg    #place thumbnail (70x70) with this name in /assets/img/blog/thumbs/
----
-This text will appear in the excerpt "post preview" on the Blog page that lists all the posts.
-<!--more-->
-This text will not be shown in the excerpt because it is after the excerpt separator.
-```
-#####Project post
-Create a Project post to go in your Portfolio by creating a file called `yyyy-mm-dd-name-of-the-project.markdown` in the `/_posts/project/` directory with the following template:
-```markdown
----
-layout: project       #important: don't change this
-title:  "Name of the project"
-date: yyyy-mm-dd hh:mm:ss
-author: Name
-categories:
-- project             #important: leave this here
-img: portfolio_10.jpg #place image (600x450) with this name in /assets/img/project/
-thumb: thumb02.jpg
-carousel:
-- single01.jpg        #place image (1280x600) with this name in /assets/img/project/carousel/
-- single02.jpg  
-- ...
-client: Company XY
-website: http://www.internet.com
----
-####This is a heading
-This is a regular paragraph. Write as much as you like.
-```
-#####Question entry
-Create a Question entry (that is listed in the Frequently Asked section on the Home page) in this directory by creating a file called `yyyy-mm-dd-do-i-have-a-question.markdown` in the `/_posts/project/` directory with the following template:
-```markdown
----
-layout: question
-title:  "Do I have a question?"
-date: yyyy-mm-dd hh:mm:ss
-author: First Last
-categories:
-- question            #important: leave this here
----
-####Can I use this theme for my website?
-Of course you can!
-```
-####Publish
-To publish with [GitHub Pages](https://pages.github.com/), simply create a branch called `gh-pages`in your repository. GitHub will build your site automatically and publish it at `http://yourusername.github.io/repositoryname/`.  
-If there are problems with loading assets like CSS files and images, make sure that the `baseurl` in the `_config.yml`is set correctly (it should say `/repositoryname`).
+It is licensed under the same terms as the original work; [Creative Commons Attribution 3.0](http://creativecommons.org/licenses/by/3.0/). This means you can:
+ *  Use it for personal stuff
+ *  Use it for commercial stuff
+ *  Change it however you like
 
-If you want to host your website somewhere else than GitHub (or just would like to customize and build your site locally), please check out the [Jekyll documentation](http://jekyllrb.com/). 
+All for free. In exchange, just give BlackTie.co credit for the design.
+
+Dribbble shots used in this theme are from the awesome designer [David Creighton-Pester](https://dribbble.com/wanderingbert). I am unsure wether the license of his art is the same or not, please consult him if you want to use them.
+
+Usage
+----
+
+Update the base-url in `_config.yml` to either `""` if it's your personal github io page, or to `"/project-name"` if it is a project of yours. In  `post-commit.sh`, change the branches as appropriate. Also update the branch name in the if-clause, depending on from which branch you want to publish things. 
+
+To set up the git hook, run: `ln -s ../../post-commit.sh .git/hooks/post-commit`.
+You might need to update permissions for the hook to run, in that case do `chmod +x .git/hooks/post-commit`.
+
+If you want to publish/update your webpage, just commit in the appropriate branch and the git hook will do the rest and publish the site to github.
+
+Note:
+This solution uses a temporary branch `tmp`, so if you already have a branch that is called so, this will probably not work.
+
+
+Old Usage Instructions
+----
+
+It is currently not a seamless experience to use this theme with GitHub Pages, despite the 'v1.0'-tag. GitHub Pages uses Jekyll version 1.5.1, whereas this project was developed for version 2.0.3 and newer. It is possible to host your site anyways, but it's a bit tedious effort required. 
+
+1. Build the project locally with `jekyll build`
+2. Delete all files from your master branch in *username.github.io*
+3. Copy the all contents from the `_site`-folder to your master branch
+4. Commit and push
+
+
+I might look at a simpler solution further ahead (or use some kind of script for the deployment).
+

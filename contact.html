@@ -1,51 +1,38 @@
 ---
-layout: contact
-title: Contact
-permalink: /contact/
+layout: default
 ---
+	
+<!-- +++++ Contact Section +++++ -->
 
-<div id="contactwrap"></div>
-
-<div class="container mtb">
-    <div class="row">
-        <div class="col-lg-8">
-            <h4>Just Get In Touch!</h4>
-            <div class="hline"></div>
-                <p>{{ site.about }}</p>
-                <form role="form">
-                  <div class="form-group">
-                    <label for="InputName1">Your Name</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1">
-                  </div>
-                  <div class="form-group">
-                    <label for="InputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1">
-                  </div>
-                  <div class="form-group">
-                    <label for="InputSubject1">Subject</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1">
-                  </div>
-                  <div class="form-group">
-                    <label for="message1">Message</label>
-                    <textarea class="form-control" id="message1" rows="3"></textarea>
-                  </div>
-                  <button type="submit" class="btn btn-theme">Submit</button>
-                </form>
-        </div><! --/col-lg-8 -->
-
-        <div class="col-lg-4">
-            <h4>Our Address</h4>
-            <div class="hline"></div>
-                <p>
-                    {% for line in site.address.first.lines %}
-                        {{ line }} <br>
-                    {% endfor %}
-                </p>
-                <p>
-                    Email: {{ site.email }}<br/>
-                    Tel: {{ site.tel }}
-                </p>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-        </div>
-    </div><! --/row -->
-</div><! --/container -->
+<div class="container pt">
+	<div class="row mt">
+		<div class="col-lg-6 col-lg-offset-3 centered">
+			<h3>CONTACT ME</h3>
+			<hr>
+			<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+		</div>
+	</div>
+	<div class="row mt">	
+		<div class="col-lg-8 col-lg-offset-2">
+			<form role="form">
+			  <div class="form-group">
+			    <input type="name" class="form-control" id="NameInputEmail1" placeholder="Your Name">
+			    <br>
+			  </div>
+			  <div class="form-group">
+			    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+			    <br>
+			  </div>
+			  <div class="form-group">
+			    <input type="email" class="form-control" id="subjectEmail1" placeholder="Subject">
+			    <br>
+			  </div>
+			  <textarea class="form-control" rows="6" placeholder="Enter your text here"></textarea>
+			    <br>
+			  <button type="submit" class="btn btn-success">SUBMIT</button>
+			</form>    			
+		</div>
+	</div><!-- /row -->
+</div><!-- /container -->
+	
+	
