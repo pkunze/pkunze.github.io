@@ -1,24 +1,19 @@
+---
+---
 <!DOCTYPE html>
-<html>
-
-  {% include head.html %}
-
-  <body>
-
+<html lang="en">
+  <head>
     {% include header.html %}
-
-    {{ content }}
-
-    {% include footer.html %}
-
+  </head>
+  <body>
+    <div class="nav-toggle"><i class="fa fa-bars fa-2x"></i> Herring Cove </div>
+    <div id = "wrapper">
+      {%include navigation.html %}
+      <div class="container">
+        {{ content }}
+      </div>
+      {% include footer.html %}
+    </div>
+    {% include scripts.html %}
   </body>
-  
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-  <!--<script src="{{ site.url }}/assets/js/retina-1.1.0.js"></script>-->
-  <script src="{{ site.url }}/assets/js/jquery.hoverdir.js"></script>
-  <script src="{{ site.url }}/assets/js/jquery.hoverex.min.js"></script>
-  <script src="{{ site.url }}/assets/js/jquery.prettyPhoto.js"></script>
-  <script src="{{ site.url }}/assets/js/jquery.isotope.min.js"></script> 
 </html>
