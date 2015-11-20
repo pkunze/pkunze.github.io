@@ -40,14 +40,14 @@ h1 a:hover,h2 a:hover,h3 a:hover,h4 a:hover
 p
 {
   font-family:"Helvetica Neue", helvetica, "Open Sans", sans-serif;
-  font-weight:200
+  //font-weight:200
 }
 
 .posts
 {
   font-size:20px;
   list-style:none;
-  font-weight:lighter;
+  //font-weight:lighter;
   line-height:250%;
   padding-bottom:30px
 }
@@ -76,12 +76,12 @@ p
   transition:all .5s ease 0
 }
 
-.navbar 
+.navbar
 {
   display: none;
 }
 
-.navbar a 
+.navbar a
 {
   text-decoration: none;
   border-bottom: 1px #b1b1b1 solid;
@@ -118,7 +118,7 @@ p
   line-height:30px;
   text-indent:40px;
   font-family:"Helvetica Neue", helvetica, "Open Sans", sans-serif;
-  font-weight:200;
+  //font-weight:200;
   color:#9c9c9c;
   text-shadow:1px 1px #fff
 }
@@ -151,7 +151,7 @@ p
 .sidebar-nav > .sidebar-brand > h3
 {
   font-size:15px;
-  font-weight:100;
+  //font-weight:100;
   color:#5d5f67
 }
 
@@ -217,7 +217,7 @@ blockquote
 
 ul,ol
 {
-  font-weight:lighter
+  //font-weight:lighter
 }
 
 pre
@@ -570,7 +570,7 @@ time
 .letter p
 {
   font-size:1.2em;
-  font-weight:lighter;
+  //font-weight:lighter;
   color:#737373;
   text-shadow:1px 1px #fff
 }
@@ -715,7 +715,7 @@ time
 .inset {
   padding: 15px;
 }
-.navbar 
+.navbar
 {
   display: inherit;
   background-color: #ededed;
@@ -726,7 +726,7 @@ time
 
 @media screen and (max-width: 500px) {
   #welcome-greeting h2 {
-   font-size: 15px; 
+   font-size: 15px;
    transition: all 0.2s ease 0s;
    font-weight: 200;
    line-height: 30px;
