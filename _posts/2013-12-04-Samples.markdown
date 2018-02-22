@@ -56,9 +56,9 @@ Donec ornare turpis non ullamcorper pulvinar. *Integer ut mauris vehicula mauris
 
 ## Code
 
-{% highlight python %}
-class node:
-    def __init__(self, data, next=None):
-        self.data = data
-        self.next = next
-{% endhighlight %}
+```csharp
+for (int i = 0 ; i < 10; i++)
+{
+  // Code to execute.
+}
+```
