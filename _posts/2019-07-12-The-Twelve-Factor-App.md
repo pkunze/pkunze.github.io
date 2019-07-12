@@ -1,6 +1,6 @@
 ---
-title: What is this, anyway?
-date: 2013-12-08 19:55:16
+title: The Twelve-Factor app?
+date: 2019-07-12 06:23:16
 categories: weblog cloud devops scaling
 ---
 
